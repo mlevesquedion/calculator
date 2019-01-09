@@ -1,5 +1,6 @@
 from quicktest import test
-from calc import Lexer, Integer, Operator, Lparen, Rparen
+from lexer import Lexer
+from token import Integer, Operator, Lparen, Rparen
 
 
 def lex(text):

@@ -1,18 +1,7 @@
-from quicktest import test
-from calc import Interpreter
+from calculator.interpreter import Interpreter
 
 
-def interpret(text):
-    return Interpreter(text).expr()
-
-
-if __name__ == '__main__':
-    test(
-        interpret,
-        [
-            [
-                '(2 + (7 - 4)) * 5 ^ 2 - 14 / 2',
-                118
-            ]
-        ]
-    )
+def test():
+    expr = '(2 + (7 - 4)) * 5 ^ 2 - 14 / 2'
+    expected = 118
+    assert Interpreter().interpret(expr) == expected
